@@ -1,15 +1,14 @@
-# Fotos originais do ensaio (115 MB) — as versões otimizadas ficam em assets/img/
-images/
+# Dependências
+node_modules/
 
-# PDF de origem do mídia kit — a cópia servida ao usuário está em assets/doc/
-modelopdf/
+# Build
+dist/
+*.zip
 
-# Configuração local do Claude Code
-.claude/settings.local.json
+# Vercel
+.vercel
 
-# Sistema operacional / editores
-Thumbs.db
-ehthumbs.db
-Desktop.ini
+# Sistema
 .DS_Store
-*.swp
+Thumbs.db
+*.log

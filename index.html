@@ -1,471 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0A0A0A">
-<title>Tamara Maria — Mídia Kit 2026 | Modelo · Influenciadora · Empreendedora</title>
-<meta name="description" content="Criando conexões que geram resultados. Mídia kit 2026 de Tamara Maria — modelo, influenciadora e empreendedora. Estratégia, autenticidade e impacto para a sua marca.">
-<meta name="author" content="Tamara Maria">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tamara Maria — Mídia Kit 2026">
-<meta property="og:description" content="Criando conexões que geram resultados. Estratégia. Autenticidade. Impacto.">
-<meta property="og:image" content="assets/img/photo/ed6.webp">
-<meta property="og:locale" content="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1B6FE8" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Montserrat:wght@200;300;400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0A'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23A461FF' text-anchor='middle'%3ETM%3C/text%3E%3C/svg%3E">
-</head>
-<body>
+    <title>Parkelô | Playgrounds no Sertão da Paraíba</title>
+    <meta
+      name="description"
+      content="Playgrounds, brinquedos e mobiliário infantil em polímero rotomoldado no Sertão da Paraíba. Não enferruja, não solta farpa e não esquenta no sol. Peça seu orçamento pelo WhatsApp."
+    />
+    <meta name="geo.region" content="BR-PB" />
+    <meta name="geo.placename" content="Sertão da Paraíba" />
 
-<!-- ═══════════════ PRELOADER ═══════════════ -->
-<div class="preloader" id="preloader" aria-hidden="true">
-  <div class="preloader__inner">
-    <div class="monogram monogram--lg"><span>T</span><span>M</span></div>
-    <div class="preloader__label">Mídia Kit <em>2026</em></div>
-    <div class="preloader__bar"><i></i></div>
-  </div>
-</div>
+    <link rel="icon" type="image/png" href="/img/brand/logo.png" />
+    <link rel="apple-touch-icon" href="/img/brand/logo.png" />
 
-<!-- ═══════════════ TEXTURAS GLOBAIS ═══════════════ -->
-<div class="fx-grain" aria-hidden="true"></div>
-<div class="fx-paper" aria-hidden="true"></div>
-<div class="cursor" id="cursor" aria-hidden="true"><i></i></div>
-<div class="scrollbar" aria-hidden="true"><i id="scrollProgress"></i></div>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Parkelô | Playgrounds no Sertão da Paraíba" />
+    <meta
+      property="og:description"
+      content="Playgrounds seguros, coloridos e feitos para durar. Atendemos casas, condomínios, escolas e buffets no Sertão da Paraíba."
+    />
+    <meta property="og:image" content="/img/brand/logo.png" />
+    <meta property="og:locale" content="pt_BR" />
 
-<!-- ═══════════════ HEADER ═══════════════ -->
-<header class="header" id="header">
-  <a href="#hero" class="header__brand" aria-label="Tamara Maria — início">
-    <span class="monogram"><span>T</span><span>M</span></span>
-    <span class="header__name">Tamara&nbsp;Maria<em>Mídia Kit 2026</em></span>
-  </a>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Parkelô",
+        "description": "Fabricação e venda de playgrounds, brinquedos e mobiliário infantil em polímero rotomoldado.",
+        "email": "comercial.parkelo@gmail.com",
+        "telephone": "+5583991375335",
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "Sertão da Paraíba"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "PB",
+          "addressCountry": "BR"
+        },
+        "sameAs": ["https://instagram.com/parkelo.oficial"]
+      }
+    </script>
 
-  <nav class="nav-desk" aria-label="Navegação principal">
-    <a href="#sobre" class="nav-desk__link">Sobre</a>
-    <a href="#impacto" class="nav-desk__link">Impacto</a>
-    <a href="#galeria" class="nav-desk__link">Galeria</a>
-    <a href="#marcas" class="nav-desk__link">Marcas</a>
-    <a href="#contato" class="btn btn--sm btn--dark" data-magnetic>Contato</a>
-  </nav>
-
-  <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
-    <i></i><i></i>
-  </button>
-</header>
-
-<!-- ═══════════════ MENU OVERLAY ═══════════════ -->
-<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-  <div class="menu__glow" aria-hidden="true"></div>
-  <nav class="menu__nav">
-    <a href="#sobre"        class="menu__link"><span class="menu__num">01</span><span class="menu__txt">Sobre mim</span></a>
-    <a href="#impacto"      class="menu__link"><span class="menu__num">02</span><span class="menu__txt">Meu impacto</span></a>
-    <a href="#galeria"      class="menu__link"><span class="menu__num">03</span><span class="menu__txt">Galeria</span></a>
-    <a href="#marcas"       class="menu__link"><span class="menu__num">04</span><span class="menu__txt">Marcas</span></a>
-    <a href="#contato"      class="menu__link"><span class="menu__num">05</span><span class="menu__txt">Contato</span></a>
-  </nav>
-  <div class="menu__foot">
-    <a href="https://instagram.com/tamaramaria_h" target="_blank" rel="noopener">@tamaramaria_h</a>
-    <span class="menu__tag">Estratégia. Autenticidade. Impacto.</span>
-  </div>
-</div>
-
-<main>
-
-<!-- ═══════════════ 01 · HERO ═══════════════ -->
-<section class="hero" id="hero">
-  <div class="hero__aurora" aria-hidden="true">
-    <span class="blob blob--1"></span>
-    <span class="blob blob--2"></span>
-    <span class="blob blob--3"></span>
-  </div>
-
-  <div class="hero__figure" data-parallax="-.06">
-    <img src="assets/img/cut/hero.webp"
-         srcset="assets/img/cut/hero@sm.webp 700w, assets/img/cut/hero.webp 970w"
-         sizes="(max-width:639px) 96vw, (max-width:1023px) 74vw, 40vw"
-         alt="Tamara Maria em produção editorial, casaco de pelo preto e corset"
-         width="970" height="1467" fetchpriority="high" decoding="async">
-    <span class="hero__halo" aria-hidden="true"></span>
-  </div>
-
-  <div class="hero__inner">
-    <div class="eyebrow eyebrow--rule" data-reveal>
-      <span>Mídia Kit</span><em>2026</em><i class="rule"></i><b class="dot"></b>
-    </div>
-
-    <svg class="spark spark--hero" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
-
-    <h1 class="display display--xxl" data-split>Tamara<br>Maria</h1>
-
-    <p class="hero__sub" data-reveal data-delay="120">
-      Criando conexões<br>que geram <em>resultados.</em>
-    </p>
-
-    <ul class="roles" data-reveal data-delay="220">
-      <li class="role">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-dress"/></svg>
-        <span>Modelo</span>
-      </li>
-      <li class="role">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
-        <span>Influenciadora</span>
-      </li>
-      <li class="role">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-crown"/></svg>
-        <span>Empreendedora</span>
-      </li>
-    </ul>
-
-    <div class="signature-card" data-reveal data-delay="320">
-      <span class="signature">TM</span>
-      <p>Estratégia.<br>Autenticidade. Impacto.</p>
-    </div>
-
-    <div class="hero__cta" data-reveal data-delay="400">
-      <a href="#contato" class="btn btn--dark" data-magnetic>
-        Fechar parceria <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
-      </a>
-      <a href="#galeria" class="btn btn--ghost" data-magnetic>Ver portfólio</a>
-    </div>
-  </div>
-
-  <a href="#sobre" class="scroll-hint" aria-label="Rolar para a próxima seção">
-    <span>Scroll</span><i></i>
-  </a>
-</section>
-
-<!-- ═══════════════ MARQUEE ═══════════════ -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee__track">
-    <span>Criar <svg viewBox="0 0 24 24"><use href="#spark"/></svg> Influenciar <svg viewBox="0 0 24 24"><use href="#spark"/></svg> Conectar <svg viewBox="0 0 24 24"><use href="#spark"/></svg></span>
-    <span>Criar <svg viewBox="0 0 24 24"><use href="#spark"/></svg> Influenciar <svg viewBox="0 0 24 24"><use href="#spark"/></svg> Conectar <svg viewBox="0 0 24 24"><use href="#spark"/></svg></span>
-    <span>Criar <svg viewBox="0 0 24 24"><use href="#spark"/></svg> Influenciar <svg viewBox="0 0 24 24"><use href="#spark"/></svg> Conectar <svg viewBox="0 0 24 24"><use href="#spark"/></svg></span>
-  </div>
-</div>
-
-<!-- ═══════════════ 02 · SOBRE MIM ═══════════════ -->
-<section class="section sobre" id="sobre">
-  <div class="wrap">
-    <div class="section__meta">
-      <span class="v-label">Tamara Maria</span>
-      <span class="pagenum">Pág. <em>02</em></span>
-    </div>
-
-    <header class="section__head">
-      <div class="eyebrow" data-reveal><i class="rule rule--sm"></i><span>Quem sou</span></div>
-      <h2 class="display display--xl" data-split>Sobre mim</h2>
-    </header>
-
-    <div class="sobre__grid">
-      <article class="glass sobre__card" data-reveal data-tilt>
-        <svg class="spark spark--card" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
-        <p>Criar conteúdo sempre foi muito mais do que aparecer na câmera para mim. É compartilhar experiências, inspirar pessoas e construir conexões reais. Há mais de <strong>3 anos</strong> faço isso de forma leve e autêntica, sem abrir mão da minha essência.</p>
-        <hr>
-        <p>Cada parceria que aceito precisa fazer sentido para mim e para quem me acompanha, porque acredito que a <strong>confiança</strong> é o que torna qualquer indicação verdadeiramente valiosa.</p>
-        <hr>
-        <p>Se você busca uma parceria autêntica, com conteúdo estratégico alinhado à sua marca, será um prazer construir algo junto com você.</p>
-
-        <div class="sobre__sign">
-          <span class="signature signature--script">Tamara Maria</span>
-        </div>
-      </article>
-
-      <figure class="sobre__figure" data-parallax=".05">
-        <span class="sobre__glow" aria-hidden="true"></span>
-        <img src="assets/img/cut/sobre.webp" alt="Tamara Maria sorrindo, casaco de pelo preto"
-             width="740" height="1544" loading="lazy" decoding="async">
-      </figure>
-    </div>
-  </div>
-
-  <div class="strip" aria-hidden="true">
-    <span>Criando conexões que geram <em>resultados</em></span>
-  </div>
-</section>
-
-<!-- ═══════════════ 03 · MEU IMPACTO ═══════════════ -->
-<section class="section impacto" id="impacto">
-  <div class="impacto__bg" aria-hidden="true"><span></span><span></span></div>
-
-  <div class="wrap">
-    <div class="section__meta section__meta--light">
-      <span class="v-label">Mídia Kit</span>
-      <span class="pagenum">Pág. <em>03</em></span>
-    </div>
-
-    <div class="impacto__head">
-      <div>
-        <div class="eyebrow" data-reveal><i class="rule rule--sm"></i><span>Números</span></div>
-        <h2 class="display display--xl" data-split>Meu<br>impacto</h2>
-        <p class="impacto__tag" data-reveal data-delay="100">
-          Conexão que gera<br>relevância e resultados.
-        </p>
-      </div>
-      <div class="impacto__text" data-reveal data-delay="160">
-        <p>Meu trabalho vai além dos números: é sobre construir conexões autênticas, inspirar decisões e entregar valor real para marcas e audiências.</p>
-        <p>Cada conteúdo é criado com estratégia e propósito — transformando visibilidade em reputação e engajamento em relacionamentos duradouros.</p>
-      </div>
-    </div>
-
-    <ul class="stats">
-      <li class="stat" data-reveal data-tilt>
-        <span class="stat__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-follow"/></svg></span>
-        <span class="stat__num" data-count="11.3" data-decimals="1" data-suffix="k">0k</span>
-        <span class="stat__label">Seguidores</span>
-      </li>
-      <li class="stat" data-reveal data-delay="80" data-tilt>
-        <span class="stat__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-eye"/></svg></span>
-        <span class="stat__num" data-count="2.8" data-decimals="1">0</span>
-        <span class="stat__label">Milhões de views</span>
-      </li>
-      <li class="stat" data-reveal data-delay="160" data-tilt>
-        <span class="stat__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-heart"/></svg></span>
-        <span class="stat__num" data-count="27" data-suffix="k">0k</span>
-        <span class="stat__label">Interações</span>
-      </li>
-      <li class="stat" data-reveal data-delay="240" data-tilt>
-        <span class="stat__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-female"/></svg></span>
-        <span class="stat__num" data-count="60" data-suffix="%">0%</span>
-        <span class="stat__label">Público feminino</span>
-      </li>
-      <li class="stat" data-reveal data-delay="320" data-tilt>
-        <span class="stat__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-play"/></svg></span>
-        <span class="stat__num" data-count="50" data-suffix="k">0k</span>
-        <span class="stat__label">Conteúdo com até 50k views orgânicos</span>
-      </li>
-    </ul>
-
-    <div class="impacto__foot">
-      <span class="monogram"><span>T</span><span>M</span></span>
-      <i class="rule"></i>
-      <span class="tracked">Criar. Influenciar. Conectar.</span>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ 04 · GALERIA ═══════════════ -->
-<section class="section galeria" id="galeria">
-  <div class="wrap">
-    <header class="section__head section__head--center">
-      <div class="eyebrow eyebrow--center" data-reveal><i class="rule rule--sm"></i><span>Editorial</span><i class="rule rule--sm"></i></div>
-      <h2 class="display display--xl" data-split>Portfólio</h2>
-      <p class="section__lead" data-reveal data-delay="100">Uma seleção do meu trabalho em frente às câmeras — direção criativa, presença e estética alinhadas à identidade de cada marca.</p>
-    </header>
-  </div>
-
-  <div class="gallery" id="gallery">
-    <figure class="gallery__item gallery__item--tall" data-lightbox="assets/img/photo/ed3.webp" data-parallax=".04">
-      <img src="assets/img/photo/ed3.webp" srcset="assets/img/photo/ed3@sm.webp 520w, assets/img/photo/ed3.webp 900w" sizes="(max-width:639px) 45vw, (max-width:1023px) 31vw, 23vw" alt="Editorial — Tamara Maria em pose sentada no estúdio" width="900" height="1350" loading="lazy" decoding="async">
-      <figcaption><span>01</span> Direção criativa</figcaption>
-    </figure>
-    <figure class="gallery__item" data-lightbox="assets/img/photo/ed4.webp" data-parallax="-.05">
-      <img src="assets/img/photo/ed4.webp" srcset="assets/img/photo/ed4@sm.webp 520w, assets/img/photo/ed4.webp 900w" sizes="(max-width:639px) 45vw, (max-width:1023px) 31vw, 23vw" alt="Editorial — retrato em close de Tamara Maria" width="900" height="1350" loading="lazy" decoding="async">
-      <figcaption><span>02</span> Beauty</figcaption>
-    </figure>
-    <figure class="gallery__item" data-lightbox="assets/img/photo/ed6.webp" data-parallax=".03">
-      <img src="assets/img/photo/ed6.webp" srcset="assets/img/photo/ed6@sm.webp 520w, assets/img/photo/ed6.webp 900w" sizes="(max-width:639px) 45vw, (max-width:1023px) 31vw, 23vw" alt="Editorial — Tamara Maria com as mãos no cabelo" width="900" height="1350" loading="lazy" decoding="async">
-      <figcaption><span>03</span> Fashion</figcaption>
-    </figure>
-    <figure class="gallery__item gallery__item--tall" data-lightbox="assets/img/photo/ed1.webp" data-parallax="-.04">
-      <img src="assets/img/photo/ed1.webp" srcset="assets/img/photo/ed1@sm.webp 520w, assets/img/photo/ed1.webp 900w" sizes="(max-width:639px) 45vw, (max-width:1023px) 31vw, 23vw" alt="Editorial — Tamara Maria de corpo inteiro" width="900" height="1350" loading="lazy" decoding="async">
-      <figcaption><span>04</span> Full look</figcaption>
-    </figure>
-    <figure class="gallery__item" data-lightbox="assets/img/photo/ed2.webp" data-parallax=".05">
-      <img src="assets/img/photo/ed2.webp" srcset="assets/img/photo/ed2@sm.webp 520w, assets/img/photo/ed2.webp 900w" sizes="(max-width:639px) 45vw, (max-width:1023px) 31vw, 23vw" alt="Editorial — Tamara Maria com o braço erguido" width="900" height="1350" loading="lazy" decoding="async">
-      <figcaption><span>05</span> Studio</figcaption>
-    </figure>
-    <figure class="gallery__item" data-lightbox="assets/img/photo/ed5.webp" data-parallax="-.03">
-      <img src="assets/img/photo/ed5.webp" srcset="assets/img/photo/ed5@sm.webp 520w, assets/img/photo/ed5.webp 900w" sizes="(max-width:639px) 45vw, (max-width:1023px) 31vw, 23vw" alt="Editorial — Tamara Maria com a mão na cabeça" width="900" height="1350" loading="lazy" decoding="async">
-      <figcaption><span>06</span> Attitude</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- ═══════════════ 05 · MARCAS ═══════════════ -->
-<section class="section marcas" id="marcas">
-  <div class="wrap">
-    <div class="section__meta">
-      <span class="v-label">Tamara Maria</span>
-      <span class="pagenum"><em>05</em> / 06</span>
-    </div>
-
-    <header class="section__head">
-      <div class="eyebrow" data-reveal><i class="rule rule--sm"></i><span>Parcerias</span></div>
-      <h2 class="display display--xl display--sentence" data-split>Marcas que<br>confiaram<br>no meu trabalho</h2>
-      <span class="arrow-rule" data-reveal data-delay="120" aria-hidden="true"><i></i></span>
-    </header>
-
-    <ul class="logos">
-      <li class="logo" data-reveal><img src="assets/img/logo/netline.webp" alt="Netline" width="235" height="69" loading="lazy"></li>
-      <li class="logo" data-reveal data-delay="50"><img src="assets/img/logo/chillibeans.webp" alt="Chilli Beans" width="344" height="344" loading="lazy"></li>
-      <li class="logo" data-reveal data-delay="100"><img src="assets/img/logo/oboticario.webp" alt="O Boticário" width="233" height="137" loading="lazy"></li>
-      <li class="logo" data-reveal data-delay="150"><img src="assets/img/logo/florapura.webp" alt="Empório Flora Pura" width="231" height="177" loading="lazy"></li>
-      <li class="logo" data-reveal data-delay="200"><img src="assets/img/logo/arezzo.webp" alt="Arezzo" width="213" height="43" loading="lazy"></li>
-      <li class="logo" data-reveal data-delay="250"><img src="assets/img/logo/nonatao.webp" alt="Nonatão Supermercados" width="396" height="359" loading="lazy"></li>
-      <li class="logo" data-reveal data-delay="300"><img src="assets/img/logo/touti.webp" alt="Touti" width="204" height="89" loading="lazy"></li>
-      <li class="logo" data-reveal data-delay="350"><img src="assets/img/logo/atacadaobijus.webp" alt="Atacadão das Bijus" width="220" height="112" loading="lazy"></li>
-      <li class="logo" data-reveal data-delay="400"><img src="assets/img/logo/senhordoscafes.webp" alt="O Senhor dos Cafés" width="188" height="189" loading="lazy"></li>
-      <li class="logo" data-reveal data-delay="450"><img src="assets/img/logo/charlesotica.webp" alt="Charles Ótica" width="163" height="147" loading="lazy"></li>
-    </ul>
-
-    <p class="marcas__foot" data-reveal>
-      <svg class="spark" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
-      E entre outras marcas e empresas parceiras.
-    </p>
-  </div>
-</section>
-
-<!-- ═══════════════ 06 · CONTATO ═══════════════ -->
-<section class="section contato" id="contato">
-  <div class="contato__aurora" aria-hidden="true"><span></span><span></span></div>
-
-  <figure class="contato__figure" data-parallax="-.04">
-    <img src="assets/img/cut/contato.webp" alt="Tamara Maria em produção editorial" width="737" height="1549" loading="lazy" decoding="async">
-  </figure>
-
-  <div class="wrap contato__inner">
-    <div class="contato__brand" data-reveal>
-      <span class="monogram monogram--stack"><span>T</span><span>M</span></span>
-      <span class="contato__brandtxt">Tamara Maria<em>Mídia Kit 2026</em></span>
-    </div>
-
-    <h2 class="display display--xl" data-split>Contato</h2>
-    <p class="contato__tag tracked" data-reveal data-delay="100">Vamos criar algo extraordinário juntos.</p>
-
-    <ul class="channels">
-      <li class="channel" data-reveal data-delay="140">
-        <span class="channel__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-instagram"/></svg></span>
-        <span class="channel__info"><b>Instagram</b><em>@tamaramaria_h</em></span>
-        <a class="channel__btn" href="https://instagram.com/tamaramaria_h" target="_blank" rel="noopener" data-magnetic>
-          Acessar perfil <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
-        </a>
-      </li>
-      <li class="channel" data-reveal data-delay="200">
-        <span class="channel__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whats"/></svg></span>
-        <span class="channel__info"><b>WhatsApp pessoal</b><em>(83) 99856-6808</em></span>
-        <a class="channel__btn" href="https://wa.me/5583998566808?text=Ol%C3%A1%20Tamara!%20Vi%20seu%20m%C3%ADdia%20kit%20e%20gostaria%20de%20falar%20sobre%20uma%20parceria." target="_blank" rel="noopener" data-magnetic>
-          Chamar agora <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
-        </a>
-      </li>
-      <li class="channel" data-reveal data-delay="260">
-        <span class="channel__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whats"/></svg></span>
-        <span class="channel__info"><b>WhatsApp Agência Ímpar</b><em>(83) 99558-4455</em></span>
-        <a class="channel__btn" href="https://wa.me/5583995584455?text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20uma%20parceria%20com%20a%20Tamara%20Maria." target="_blank" rel="noopener" data-magnetic>
-          Chamar agora <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
-        </a>
-      </li>
-    </ul>
-
-    <div class="contato__close">
-      <span class="signature signature--script signature--xl" data-reveal>Conte comigo!</span>
-      <p class="tracked" data-reveal data-delay="80">Conectar é o primeiro passo para transformar ideias em impacto.</p>
-      <a class="btn btn--light btn--wide" href="assets/doc/midia-kit-tamara-maria-2026.pdf" download data-magnetic data-reveal data-delay="140">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg> Baixar mídia kit em PDF
-      </a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ═══════════════ FOOTER ═══════════════ -->
-<footer class="footer">
-  <div class="wrap footer__wrap">
-    <span class="footer__thanks">Obrigada pela confiança!</span>
-    <i class="rule"></i>
-    <span class="footer__meta">
-      Tamara Maria · Mídia Kit 2026 · <a href="https://instagram.com/tamaramaria_h" target="_blank" rel="noopener">@tamaramaria_h</a>
-    </span>
-  </div>
-</footer>
-
-<!-- ═══════════════ CTA FLUTUANTE (mobile) ═══════════════ -->
-<a class="fab" href="https://wa.me/5583998566808?text=Ol%C3%A1%20Tamara!%20Vi%20seu%20m%C3%ADdia%20kit%20e%20gostaria%20de%20falar%20sobre%20uma%20parceria." target="_blank" rel="noopener" id="fab" aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-whats"/></svg>
-  <span>Fechar parceria</span>
-</a>
-
-<!-- ═══════════════ LIGHTBOX ═══════════════ -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de imagens">
-  <button class="lightbox__close" id="lbClose" aria-label="Fechar">&times;</button>
-  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Imagem anterior">&#8249;</button>
-  <!-- sem src inicial: um src="" resolveria para a própria página e geraria requisição extra -->
-  <img id="lbImg" alt="">
-
-  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Próxima imagem">&#8250;</button>
-  <span class="lightbox__count" id="lbCount"></span>
-</div>
-
-<!-- ═══════════════ SPRITE SVG ═══════════════ -->
-<svg style="display:none" aria-hidden="true">
-  <defs>
-    <symbol id="spark" viewBox="0 0 24 24">
-      <path d="M12 1c.55 6.1 4.9 10.45 11 11-6.1.55-10.45 4.9-11 11-.55-6.1-4.9-10.45-11-11 6.1-.55 10.45-4.9 11-11Z"/>
-    </symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24">
-      <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-dress" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 2.6a2 2 0 0 1 2 2c0 1.2-.8 1.7-2 2.4-1.2-.7-2-1.2-2-2.4a2 2 0 0 1 2-2Z"/>
-        <path d="M9.4 8.2h5.2l1.3 5.4a13 13 0 0 1-3.9.7 13 13 0 0 1-3.9-.7L9.4 8.2Z"/>
-        <path d="M8.4 14.6h7.2l1.1 5.4a17 17 0 0 1-4.7.7 17 17 0 0 1-4.7-.7l1.1-5.4Z"/>
-      </g>
-    </symbol>
-    <symbol id="i-crown" viewBox="0 0 24 24">
-      <path d="M3 18.4 4.6 7.2l4 4.2L12 4.4l3.4 7 4-4.2L21 18.4H3Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-    <symbol id="i-follow" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="10" cy="7.5" r="3.6"/>
-        <path d="M3.4 20c.4-3.7 3.2-6.2 6.6-6.2 1.3 0 2.5.4 3.5 1"/>
-        <circle cx="17.6" cy="17" r="3.6"/><path d="M17.6 15.3v3.4M15.9 17h3.4"/>
-      </g>
-    </symbol>
-    <symbol id="i-eye" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M1.8 12S5.4 6 12 6s10.2 6 10.2 6-3.6 6-10.2 6S1.8 12 1.8 12Z"/>
-        <circle cx="12" cy="12" r="2.9"/>
-      </g>
-    </symbol>
-    <symbol id="i-heart" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M11.4 19.6C8.6 17.4 3.4 14 3.4 9.6a4.2 4.2 0 0 1 8-1.8 4.2 4.2 0 0 1 8 1.8c0 1.1-.3 2.1-.9 3.1"/>
-        <circle cx="18" cy="17.4" r="3.2"/><path d="M18 15.9v3M16.5 17.4h3"/>
-      </g>
-    </symbol>
-    <symbol id="i-female" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="8.4" r="5"/><path d="M12 13.4v8M8.6 18.4h6.8"/>
-      </g>
-    </symbol>
-    <symbol id="i-play" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="9.2"/><path d="M10 8.4l6 3.6-6 3.6V8.4Z"/>
-      </g>
-    </symbol>
-    <symbol id="i-instagram" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/>
-        <circle cx="12" cy="12" r="4"/><circle cx="16.9" cy="7.1" r="1" fill="currentColor" stroke="none"/>
-      </g>
-    </symbol>
-    <symbol id="i-whats" viewBox="0 0 24 24">
-      <path d="M12 2.6a9.3 9.3 0 0 0-8 14.1L2.6 21.4l4.8-1.3A9.3 9.3 0 1 0 12 2.6Zm4.9 13.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.6-4.6c-.6-1-.7-1.9-.6-2.6.1-.5.6-1.3 1.1-1.5.3-.1.7-.1.9.1.2.2.8 1.6.9 1.8.1.2 0 .4-.1.6l-.4.5c-.1.2-.2.3 0 .6.5.8 1.5 1.8 2.4 2.2.3.1.4.1.6-.1l.6-.7c.2-.2.4-.2.6-.1.3.1 1.6.8 1.8 1 .2.1.2.4.1.6l-.1.1Z" fill="currentColor"/>
-    </symbol>
-    <symbol id="i-download" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 3.6v11M7.6 10.4 12 14.8l4.4-4.4M4.4 19.4h15.2"/>
-      </g>
-    </symbol>
-  </defs>
-</svg>
-
-<script src="assets/js/main.js" defer></script>
-<!-- Vercel Analytics (preservado do site anterior deste repositório) -->
-<script defer src="/_vercel/insights/script.js"></script>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

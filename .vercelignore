@@ -1,0 +1,7 @@
+# Não precisa ir para o servidor de build
+node_modules
+dist
+parkelo-site.zip
+
+# Scripts Python de preparação (imagens e ficha técnica) — rodam só na máquina
+scripts

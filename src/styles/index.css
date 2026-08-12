@@ -1,0 +1,191 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   DESIGN SYSTEM PARKELÔ
+   Cores extraídas do logo 3D e do material de marca (PDF).
+   ========================================================================== */
+
+@theme {
+  /* Paleta primária da marca */
+  --color-pk-azul: #1b6fe8;
+  --color-pk-azul-esc: #0e4fb0;
+  --color-pk-azul-clr: #e8f1ff;
+
+  --color-pk-laranja: #f7941d;
+  --color-pk-laranja-esc: #d97706;
+  --color-pk-laranja-clr: #fff3e0;
+
+  --color-pk-vermelho: #e8302a;
+  --color-pk-vermelho-esc: #b81f1a;
+  --color-pk-vermelho-clr: #ffecea;
+
+  --color-pk-verde: #8cc63f;
+  --color-pk-verde-esc: #5f9021;
+  --color-pk-verde-clr: #f1fae0;
+
+  --color-pk-roxo: #7b2fbe;
+  --color-pk-roxo-esc: #571f8c;
+  --color-pk-roxo-clr: #f4ebff;
+
+  --color-pk-amarelo: #ffc72c;
+  --color-pk-amarelo-esc: #d9a200;
+  --color-pk-amarelo-clr: #fff8e1;
+
+  /* Neutros */
+  --color-pk-tinta: #12233d;
+  --color-pk-cinza: #5b6b83;
+  --color-pk-nuvem: #f4f7fc;
+
+  /* Tipografia */
+  --font-display: 'Fredoka', system-ui, sans-serif;
+  --font-sans: 'Nunito Sans', system-ui, sans-serif;
+
+  /* Raios generosos — a marca é toda arredondada */
+  --radius-pk: 1.75rem;
+  --radius-pk-lg: 2.5rem;
+  --radius-pk-xl: 3.5rem;
+
+  /* Animações */
+  --animate-flutuar: flutuar 6s ease-in-out infinite;
+  --animate-girar-lento: girar 26s linear infinite;
+  --animate-balancar: balancar 3.5s ease-in-out infinite;
+  --animate-brilho: brilho 2.6s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0) }
+  50%      { transform: translateY(-18px) }
+}
+@keyframes girar {
+  to { transform: rotate(360deg) }
+}
+@keyframes balancar {
+  0%, 100% { transform: rotate(-4deg) }
+  50%      { transform: rotate(4deg) }
+}
+@keyframes brilho {
+  0%, 100% { opacity: .45; transform: scale(1) }
+  50%      { opacity: 1;   transform: scale(1.12) }
+}
+
+/* --------------------------------------------------------------------------
+   BASE
+   -------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-pk-tinta);
+    background: #fff;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+  }
+
+  ::selection {
+    background: var(--color-pk-amarelo);
+    color: var(--color-pk-tinta);
+  }
+
+  /* Scrollbar com a cara da marca */
+  ::-webkit-scrollbar { width: 12px; height: 12px }
+  ::-webkit-scrollbar-track { background: var(--color-pk-nuvem) }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-pk-azul);
+    border-radius: 99px;
+    border: 3px solid var(--color-pk-nuvem);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-pk-azul-esc) }
+
+  /* Respeita quem pediu menos movimento */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   COMPONENTES DA MARCA
+   -------------------------------------------------------------------------- */
+@layer components {
+  /* Barra arco-íris — assinatura visual da Parkelô (vem do rodapé do PDF) */
+  .barra-arcoiris {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  .barra-arcoiris > span {
+    flex: 1;
+    border-radius: 99px;
+  }
+
+  /* Texto com gradiente das cores da marca */
+  .texto-arcoiris {
+    background: linear-gradient(
+      100deg,
+      var(--color-pk-azul) 0%,
+      var(--color-pk-roxo) 22%,
+      var(--color-pk-vermelho) 45%,
+      var(--color-pk-laranja) 68%,
+      var(--color-pk-verde) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Grid de bolinhas (aparece no material da marca) */
+  .malha-pontos {
+    background-image: radial-gradient(currentColor 1.6px, transparent 1.6px);
+    background-size: 16px 16px;
+  }
+
+  /* Cartão padrão da marca */
+  .cartao-pk {
+    background: #fff;
+    border-radius: var(--radius-pk);
+    box-shadow:
+      0 1px 2px rgb(18 35 61 / 0.04),
+      0 12px 32px -12px rgb(18 35 61 / 0.14);
+    transition: transform .45s cubic-bezier(.2,.8,.2,1),
+                box-shadow .45s cubic-bezier(.2,.8,.2,1);
+  }
+  .cartao-pk:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 1px 2px rgb(18 35 61 / 0.05),
+      0 28px 56px -18px rgb(18 35 61 / 0.26);
+  }
+
+  /* Fundo "playground": céu suave com blobs */
+  .fundo-ceu {
+    background:
+      radial-gradient(60rem 40rem at 15% -10%, var(--color-pk-azul-clr), transparent 60%),
+      radial-gradient(50rem 34rem at 92% 8%, var(--color-pk-amarelo-clr), transparent 62%),
+      #fff;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   UTILITÁRIOS
+   -------------------------------------------------------------------------- */
+@utility contorno-pk {
+  -webkit-text-stroke: 2px var(--color-pk-tinta);
+}
+
+@utility sombra-pk {
+  filter: drop-shadow(0 24px 28px rgb(18 35 61 / 0.22));
+}

@@ -1,60 +1,67 @@
-# Tamara Maria — Mídia Kit 2026
+# Parkelô — site institucional
 
-Landing page do mídia kit da Tamara Maria — modelo, influenciadora e empreendedora.
-
-**Site estático**, sem build e sem dependências: basta servir a pasta.
-
-## Estrutura
-
-```
-index.html              página única
-assets/css/style.css    design system (mobile-first → tablet → desktop)
-assets/js/main.js       interações e efeitos (vanilla JS, sem bibliotecas)
-assets/img/cut/         recortes com fundo removido (hero, sobre, contato)
-assets/img/photo/       portfólio editorial (+ variantes @sm para mobile)
-assets/img/logo/        logos das marcas parceiras
-assets/doc/             mídia kit em PDF (download)
-```
-
-## Seções
-
-Hero · Sobre mim · Meu impacto · Portfólio · Marcas · Contato
-
-## Design
-
-Template **Editorial Luxury**. Paleta, tipografia e conteúdo extraídos do
-mídia kit original em PDF:
-
-| Uso | Valor |
-|---|---|
-| Roxo principal | `#8C52FF` |
-| Roxo claro | `#A461FF` |
-| Tinta | `#0A0A0A` / `#1E1E1E` |
-| Lavanda | `#D9D2E1` |
-| Papel | `#F6F4F8` |
-
-Tipografia: **Oranienbaum** (títulos), **Montserrat** (texto), **Parisienne** (assinatura).
-
-## Responsividade
-
-Testado de 360px a 1440px+. Breakpoints em 640px (tablet), 1024px (desktop) e 1440px (wide).
-
-Imagens em WebP com `srcset`, servindo versões leves no mobile — ~1,3 MB no total.
-
-## Efeitos
-
-Revelação por scroll, títulos animados letra a letra, contadores, parallax,
-aurora em movimento, textura de papel, lightbox na galeria e menu em círculo.
-Tudo respeita `prefers-reduced-motion`.
+Site da **Parkelô**, fabricante de playgrounds e brinquedos infantis em polímero
+rotomoldado. Voltado para o cliente final (não revendedor), com atendimento no
+Sertão da Paraíba.
 
 ## Rodar localmente
 
 ```bash
-python -m http.server 8791
+npm install
+npm run dev
 ```
 
-Depois acesse `http://localhost:8791`.
+Outros comandos:
 
-## Contato
+```bash
+npm run build     # gera dist/ para publicar
+npm run preview   # testa o build localmente
+```
 
-Instagram [@tamaramaria_h](https://instagram.com/tamaramaria_h) · WhatsApp (83) 99856-6808
+## Publicar
+
+A pasta `dist/` é estática e roda em qualquer hospedagem. Como o site usa React
+Router, o servidor precisa redirecionar todas as rotas para `index.html`. Isso já
+está configurado em `vercel.json` (Vercel) e `public/_redirects` (Netlify). Em
+Apache/cPanel é preciso criar um `.htaccess` à mão.
+
+## Estrutura
+
+```
+src/
+├─ config/site.js      TODOS os dados de contato ficam aqui
+├─ data/
+│  ├─ produtos.raw.json     GERADO pelo script de imagens — não editar
+│  ├─ fichas_extraidas.json GERADO do catálogo PDF — não editar
+│  ├─ fichas.js             medidas de cada produto
+│  └─ produtos.js           junta tudo + helpers
+├─ components/         Cabeçalho, Rodapé, CartaoProduto, Botao, Formas…
+├─ pages/              Home, Catalogo, Produto, Sobre, Contato, 404
+└─ styles/index.css    design system (Tailwind v4 @theme)
+```
+
+## Catálogo
+
+70 produtos em 6 linhas: playgrounds (22), Little Play (6), temáticos (4),
+aquáticos (9), brinquedos avulsos (25) e mobiliário (4).
+
+A ficha técnica de 47 deles foi extraída do catálogo em PDF do cliente. Os outros
+23 não têm medida no catálogo e o site mostra "Medidas sob consulta".
+
+## Scripts de preparação
+
+Rodam só na máquina do desenvolvedor, nesta ordem, e exigem Python com
+`pillow` e `pymupdf`:
+
+```bash
+python scripts/otimizar_imagens.py   # renders PNG → WebP (3 tamanhos)
+python scripts/extrair_catalogo.py   # catálogo PDF → fichas_extraidas.json
+python scripts/gerar_fichas.py       # monta fichas.js  (SOBRESCREVE)
+```
+
+As imagens originais (PNG 2000×2000, ~290 MB) ficam fora deste repositório.
+O que está versionado é o resultado otimizado em `public/img/` (43 MB).
+
+## Stack
+
+Vite · React 18 · Tailwind CSS v4 · Framer Motion · React Router
