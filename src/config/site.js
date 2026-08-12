@@ -37,6 +37,16 @@ export const site = {
   razaoSocial: '',
   cnpj: '',
   endereco: '',
+
+  // ── GRUPO EMPRESARIAL ─────────────────────────────────────
+  // A Parkelô é gerenciada por este grupo. Aparece no rodapé.
+  grupo: {
+    nome: 'Jônatas Oliveira',
+    descricao: 'Grupo Empresarial',
+    cnpj: '45.988.259/0001-20',
+    logo: '/img/brand/grupo-sm.webp',
+    site: '', // se um dia tiver site próprio, o logo vira link sozinho
+  },
 }
 
 /**

@@ -47,17 +47,41 @@ export default function Rodape() {
       <div className="relative h-px bg-white/12" />
 
       {/* Colunas */}
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      {/* A 1ª coluna é mais larga: acomoda os dois logos lado a lado */}
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:px-8">
         {/* Marca */}
         <div className="sm:col-span-2 lg:col-span-1">
-          <img
-            src="/img/brand/logo-sm.webp"
-            alt={site.nome}
-            width="150"
-            height="98"
-            className="h-16 w-auto"
-          />
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
+          {/* Parkelô e o grupo que a gerencia, lado a lado */}
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-4">
+            <img
+              src="/img/brand/logo-sm.webp"
+              alt={site.nome}
+              width="150"
+              height="98"
+              className="h-16 w-auto"
+            />
+
+            {site.grupo?.logo && (
+              <>
+                <span className="h-12 w-px shrink-0 bg-white/20" />
+                <span>
+                  <span className="block text-[11px] tracking-wide text-white/40 uppercase">
+                    Uma empresa do
+                  </span>
+                  <img
+                    src={site.grupo.logo}
+                    alt={`${site.grupo.nome} — ${site.grupo.descricao}`}
+                    width="320"
+                    height="58"
+                    loading="lazy"
+                    className="mt-1.5 h-7 w-auto opacity-85"
+                  />
+                </span>
+              </>
+            )}
+          </div>
+
+          <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/60">
             {site.descricao}
           </p>
 
@@ -212,6 +236,12 @@ export default function Rodape() {
           <p>
             © {ano} {site.razaoSocial || site.nome}
             {site.cnpj && ` · CNPJ ${site.cnpj}`}
+            {site.grupo?.cnpj && (
+              <>
+                {' · '}
+                {site.grupo.nome} {site.grupo.descricao} · CNPJ {site.grupo.cnpj}
+              </>
+            )}
           </p>
           <p>Imagens ilustrativas. As cores podem variar sem aviso prévio.</p>
         </div>
