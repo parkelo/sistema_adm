@@ -88,6 +88,10 @@ Confirmados e já aplicados em `src/config/site.js`:
 - **Instagram:** `@parkelo.oficial`
 - **Região atendida:** Sertão da Paraíba (PB) — usado no SEO, no rodapé,
   no hero da Home e no JSON-LD `LocalBusiness` do `index.html`
+- **Grupo empresarial:** a Parkelô é gerenciada pelo **Jônatas Oliveira Grupo
+  Empresarial**, CNPJ `45.988.259/0001-20`. Logo e CNPJ aparecem no rodapé
+  (objeto `grupo` em `site.js`). O arquivo original era JPEG branco sobre preto;
+  virou WebP com transparência usando o brilho como canal alfa.
 
 ⚠️ **Falta a cidade-sede.** O campo `cidade` está vazio de propósito: o cliente
 informou só a região. Sem cidade o site mostra "Sertão da Paraíba / Paraíba ·
@@ -361,10 +365,20 @@ todas as rotas para `index.html` (SPA fallback). Isso já está configurado:
 `vercel.json` (Vercel) e `public/_redirects` (Netlify). Em Apache/cPanel é
 preciso criar um `.htaccess` à mão.
 
-**O cliente publica na conta dele.** Não há pasta `.vercel` no projeto, então
-nenhuma conta está vinculada — `vercel --prod` usa a conta que estiver logada.
-Existe também `site/parkelo-site.zip` (43 MB) com o conteúdo da `dist/` para
-upload por arrastar-e-soltar.
+**Repositório:** `https://github.com/parkelo/sistema_adm` — a pasta `C:\PARKELO\site`
+**é** o repositório (tem `.git`), então basta `git add -A && git commit && git push`.
+O `main` tem o histórico anterior: o commit `89390d4` guarda a landing page do
+mídia kit da Tamara Maria, que estava nesse repo por engano e pode ser recuperada
+com `git checkout 89390d4`.
+
+⚠️ `CLAUDE.md` existe em dois lugares: `C:\PARKELO\CLAUDE.md` (o que o Claude Code
+lê) e a cópia versionada em `site/CLAUDE.md`. Ao editar, copie um para o outro
+antes de commitar.
+
+**Domínio:** `parkelo.com.br`, registrado na Hostinger. Aponta para a Vercel via
+`A @ → 216.198.79.1` e `CNAME www → 71d7d4d320ec62ca.vercel-dns-017.com`
+(esse CNAME é único do domínio, gerado pela Vercel). O `www` é o endereço
+principal; o apex redireciona para ele com 308.
 
 ---
 
